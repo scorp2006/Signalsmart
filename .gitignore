@@ -1,0 +1,40 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+*.egg-info/
+.env
+
+# Data (do not commit large/downloaded datasets)
+backend/data/raw/*
+backend/data/processed/*
+!backend/data/raw/.gitkeep
+!backend/data/processed/.gitkeep
+*.csv
+*.csv.gz
+
+# Node / React Native
+node_modules/
+npm-debug.log*
+yarn-error.log*
+.expo/
+
+# Android
+mobile/android/.gradle/
+mobile/android/app/build/
+mobile/android/build/
+mobile/android/local.properties
+# Keep the standard RN debug keystore and the gradle wrapper jar in the repo.
+*.keystore
+!mobile/android/app/debug.keystore
+!mobile/android/gradle/wrapper/gradle-wrapper.jar
+
+# iOS (not targeted, but ignore if generated)
+mobile/ios/Pods/
+
+# Editors / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

@@ -1,0 +1,16 @@
+# Spin up a local PostGIS for the demo:  docker compose up -d db
+services:
+  db:
+    image: postgis/postgis:16-3.4
+    container_name: signalsafe_db
+    environment:
+      POSTGRES_USER: signalsafe
+      POSTGRES_PASSWORD: signalsafe
+      POSTGRES_DB: signalsafe
+    ports:
+      - "5432:5432"
+    volumes:
+      - signalsafe_pgdata:/var/lib/postgresql/data
+
+volumes:
+  signalsafe_pgdata:
